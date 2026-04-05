@@ -15,8 +15,6 @@
         <div class="BodyContent" id="Home">
             <div class="HomeBanner">
                 <img src="Resources/BannerBG.jpg">
-                <div class="HomeBannerBackdrop">
-                </div>
                 <div class="HomeBannerAnimation">
                     <div class="AnimationRow">
                     </div>
@@ -25,7 +23,8 @@
                     <div class="AnimationRow">
                     </div>
                 </div>
-                
+
+                <img src="Resources/Glass.png" class="HomeBannerGlass">
                 <div class="HomeBannerContent">
                     <div class="HomeBannerNamePlate">
                         <img src="Resources/Profile.png">
@@ -44,7 +43,7 @@
             <div class="SiteBody">
                 <div class="LeftColumn">
                     <div class="ShoutoutPane">
-                        <h1 class="PaneHeader">
+                        <h1 class="PaneHeader" id="ShoutoutPaneHeader">
                             Cool people
                         </h1>
                         <a class="SoftwareButton" href="https://teknixstuff.com/" target="_blank">
@@ -72,7 +71,7 @@
                     </div>
                     <div class="NewsPane">
                         <h1 class="PaneHeader">
-                            News
+                            Updates
                         </h1>
                         <li>
                             Released ReBriefcase
@@ -82,6 +81,22 @@
                         </li>
                         <li>
                             Rebranded to avoid potential copyright issues
+                        </li>
+                        <li>
+                            Changed the name of this panel from "News" to "Updates"
+                        </li>
+                        <li>
+                            Fixed the broken "Active sidebar button" logic
+                            <h6>(Sidebar buttons get highlighted when their page is loaded now)</h6>
+                        </li>
+                        <li>
+                            Added a pattern to the sidebar
+                        </li>
+                        <li>
+                            Added glass streaks to the home banner to match the software banners
+                        </li>
+                        <li>
+                            Made the "Cool people" pane stand out more
                         </li>
                     </div>
                 </div>

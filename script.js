@@ -2,11 +2,24 @@
 function loadBars() {
     fetch("Resources/GlobalContent/sidebar.html").then(res => res.text()).then(data => {
         document.getElementById("Sidebar").innerHTML = data;
+        
+        let links = document.getElementById("Sidebar").querySelectorAll("a");
+        const currentPage = window.location.pathname.split("/").pop();
+
+        links.forEach(link => {
+            const sidebarButton = link.querySelector("button");
+
+            if (link.getAttribute("href") === currentPage && sidebarButton.classList.contains("SidebarButton")) {
+                sidebarButton.id = "SidebarButtonActive";
+            }
+        });
     });
+    
 
     fetch("Resources/GlobalContent/topbar.html").then(res => res.text()).then(data => {
         document.getElementById("Topbar").innerHTML = data;
     });
+    
 }
 
 loadBars();

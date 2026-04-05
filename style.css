@@ -105,17 +105,10 @@ button, a {
     filter: drop-shadow(0px 0px 5px black);
 }
 
-.HomeBannerBackdrop {
+.HomeBannerGlass {
     position: absolute;
-    width: 100%;
-    height: inherit;
-    background: transparent;
-
-    mask: linear-gradient(90deg, transparent 0%, black 50%, transparent 100%);
-    backdrop-filter: blur(20px);
+    mask: radial-gradient(circle, transparent, black 80%);
 }
-
-
 
 
 .HomeBannerAnimation {
@@ -219,13 +212,17 @@ button, a {
 .ShoutoutPane {
     flex: 1;
     max-width: 450px;
-    border: 1px solid var(--topbar-bor-color);
+    border: 2px solid gold;
     box-sizing: border-box;
     padding: 10px;
     border-radius: 5px;
     background: linear-gradient(180deg, white 50%, var(--topbar-top-bot-color) 100%);
-    box-shadow: 0px 4px 5px 0px lightgray;
+    box-shadow: 0px 4px 15px 0px #ffae0054;
     margin: 50px 50px 15px 50px;
+}
+
+#ShoutoutPaneHeader {
+    color: #ffbb00;
 }
 
 .ProjectsPane, .GamesPane {
@@ -514,12 +511,25 @@ button, a {
 }
 
 .Sidebar {
+    position: relative;
+    display: flex;
+    flex-direction: column;
     box-sizing: border-box;
     width: 200px;
     min-width: 200px;
     height: calc(100vh - var(--topbar-height));
     background: linear-gradient(240deg, var(--sidebar-color) 10%, var(--sidebar-high-color) 11%, var(--sidebar-color) 20%, var(--sidebar-color) 40%, var(--sidebar-high-color) 41%, var(--sidebar-color) 60%, var(--sidebar-color) 95%, var(--sidebar-high-color) 96%);
     border-right: 1px solid var(--topbar-bor-color);
+    overflow: hidden;
+}
+
+.SidebarPattern {
+    position: absolute;
+    height: 100%;
+    bottom: 0px;
+    mask: linear-gradient(180deg, transparent, black);
+    opacity: 5%;
+    pointer-events: none;
 }
 
 .Divider {
